@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrucciones Detalladas - FFO SA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .instruccion-detallada {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #4a7c59;
+        }
+        
+        .instruccion-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .instruccion-icon {
+            font-size: 2.5rem;
+            color: #4a7c59;
+            margin-right: 1rem;
+            width: 60px;
+            text-align: center;
+        }
+        
+        .instruccion-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d5a27;
+            margin: 0;
+        }
+        
+        .instruccion-subtitle {
+            color: #666;
+            font-size: 1rem;
+            margin: 0.5rem 0 0 0;
+        }
+        
+        .instruccion-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .pasos {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .pasos h4 {
+            color: #2d5a27;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .pasos ol {
+            padding-left: 1.5rem;
+        }
+        
+        .pasos li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .consejos {
+            background: #e8f5e8;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #4a7c59;
+        }
+        
+        .consejos h4 {
+            color: #2d5a27;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .consejos ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .consejos li {
+            margin-bottom: 0.8rem;
+            color: #555;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .consejos li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    
+        
+        .volver-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4a7c59, #6b8e6b);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .volver-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 124, 89, 0.4);
+        }
+        
+        .hero-instrucciones {
+            background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e8 100%);
+            padding: 100px 0 50px;
+            text-align: center;
+        }
+        
+        .hero-instrucciones h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2d5a27;
+            margin-bottom: 1rem;
+        }
+        
+        .hero-instrucciones p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .instruccion-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-instrucciones h1 {
+                font-size: 2rem;
+            }
+            
+            .instruccion-detallada {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>FFO SA</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="index.html#productos" class="nav-link">Producto</a></li>
+                    <li><a href="index.html#aplicacion" class="nav-link">Aplicación</a></li>
+                    <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-instrucciones">
+        <div class="container">
+            <a href="index.html" class="volver-btn">
+                <i class="fas fa-arrow-left"></i> Volver al Inicio
+            </a>
+            <h1>Instrucciones Detalladas</h1>
+            <p>Guía completa para la correcta aplicación de FFO - Enmienda Biológica Líquida</p>
+        </div>
+    </section>
+
+    <!-- Instrucciones Detalladas -->
+    <section class="instrucciones-detalladas">
+        <div class="container">
+            
+            <!-- Almacenamiento -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">Almacenamiento</h2>
+                        <p class="instruccion-subtitle">Conservación adecuada del producto</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Pasos a Seguir</h4>
+                        <ol>
+                            <li>Mantener el producto en un lugar completamente oscuro</li>
+                            <li>Evitar la exposición directa a la luz solar</li>
+                            <li>Almacenar en un ambiente fresco y seco</li>
+                            <li>Mantener la temperatura entre 15°C y 25°C</li>
+                            <li>Evitar cambios bruscos de temperatura</li>
+                            <li>Mantener el envase bien cerrado</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Usar un armario o despensa sin ventanas</li>
+                            <li>Evitar lugares cerca de calefactores o estufas</li>
+                            <li>No almacenar en garajes o sótanos húmedos</li>
+                            <li>Verificar la fecha de vencimiento regularmente</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Preparación del Equipo -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">Preparación del Equipo</h2>
+                        <p class="instruccion-subtitle">Limpieza y preparación antes de la aplicación</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Pasos a Seguir</h4>
+                        <ol>
+                            <li>Desmontar completamente el equipo de aplicación</li>
+                            <li>Lavar con agua limpia y jabón neutro</li>
+                            <li>Enjuagar abundantemente con agua</li>
+                            <li>Desinfectar con solución de cloro al 1%</li>
+                            <li>Enjuagar nuevamente con agua limpia</li>
+                            <li>Secar completamente al aire</li>
+                            <li>Verificar que no queden residuos</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Usar agua de pozo o filtrada, no de red</li>
+                            <li>Lavar también mangueras y boquillas</li>
+                            <li>Verificar el estado de los filtros</li>
+                            <li>Revisar que no haya obstrucciones</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            
+            </div>
+
+            <!-- Agitación -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">Agitación</h2>
+                        <p class="instruccion-subtitle">Proceso de mezcla para activar el producto</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Pasos a Seguir</h4>
+                        <ol>
+                            <li>Agitar enérgicamente 24 horas antes de aplicar</li>
+                            <li>Repetir la agitación justo antes de usar</li>
+                            <li>Agitar durante 3-5 minutos continuos</li>
+                            <li>Verificar que la mezcla sea homogénea</li>
+                            <li>Agitar también durante la aplicación</li>
+                            <li>Mantener la agitación constante</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Usar un agitador mecánico si es posible</li>
+                            <li>Agitar en sentido circular y vertical</li>
+                            <li>Verificar que no queden sedimentos</li>
+                            <li>La mezcla debe verse uniforme</li>
+                        </ul>
+                    </div>
+                </div>
+                
+         
+            </div>
+
+            <!-- Presión de Aplicación -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">Presión de Aplicación</h2>
+                        <p class="instruccion-subtitle">Control de presión para aplicación óptima</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Pasos a Seguir</h4>
+                        <ol>
+                            <li>Verificar el manómetro del equipo</li>
+                            <li>Ajustar la presión a máximo 2 Kg/cm²</li>
+                            <li>Probar la presión antes de comenzar</li>
+                            <li>Mantener presión constante durante la aplicación</li>
+                            <li>Verificar regularmente durante el trabajo</li>
+                            <li>Ajustar según el tipo de cultivo</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Presión ideal: 1.5-2 Kg/cm²</li>
+                            <li>Usar boquillas de baja presión</li>
+                            <li>Verificar el estado de las boquillas</li>
+                            <li>Calibrar el equipo regularmente</li>
+                        </ul>
+                    </div>
+                </div>
+                
+         
+            </div>
+
+            <!-- pH del Caldo -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">pH del Caldo</h2>
+                        <p class="instruccion-subtitle">Control del pH para máxima efectividad</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Pasos a Seguir</h4>
+                        <ol>
+                            <li>Medir el pH del agua antes de mezclar</li>
+                            <li>Preparar el caldo con FFO</li>
+                            <li>Medir el pH del caldo final</li>
+                            <li>Ajustar con ácido cítrico si es necesario</li>
+                            <li>Verificar que esté entre 6.0 y 8.9</li>
+                            <li>Medir durante toda la aplicación</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>pH ideal: 6.5-7.5</li>
+                            <li>Usar agua de pozo o filtrada</li>
+                            <li>Evitar agua con alto contenido de cal</li>
+                            <li>Medir con tiras reactivas o pH-metro</li>
+                        </ul>
+                    </div>
+                </div>
+                
+           
+            </div>
+
+            <!-- Condiciones Climáticas -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">Condiciones Climáticas</h2>
+                        <p class="instruccion-subtitle">Momento óptimo para la aplicación</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Condiciones Ideales</h4>
+                        <ol>
+                            <li>Temperatura: 15°C a 25°C</li>
+                            <li>Humedad relativa: 60-80%</li>
+                            <li>Viento: máximo 15 km/h</li>
+                            <li>Hora: temprano en la mañana o al atardecer</li>
+                            <li>Evitar días muy soleados</li>
+                            <li>No aplicar con lluvia inminente</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Mejor momento: 6-10 AM o 6-8 PM</li>
+                            <li>Evitar mediodía en verano</li>
+                            <li>Verificar pronóstico del tiempo</li>
+                            <li>No aplicar con viento fuerte</li>
+                        </ul>
+                    </div>
+                </div>
+                
+             
+            </div>
+
+            <!-- No Mezclar -->
+            <div class="instruccion-detallada">
+                <div class="instruccion-header">
+                    <div class="instruccion-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div>
+                        <h2 class="instruccion-title">No Mezclar</h2>
+                        <p class="instruccion-subtitle">Productos incompatibles con FFO</p>
+                    </div>
+                </div>
+                
+                <div class="instruccion-content">
+                    <div class="pasos">
+                        <h4>Productos Incompatibles</h4>
+                        <ol>
+                            <li>Fungicidas de cualquier tipo</li>
+                            <li>Herbicidas</li>
+                            <li>Insecticidas químicos</li>
+                            <li>Fertilizantes químicos</li>
+                            <li>Productos con pH muy ácido o alcalino</li>
+                            <li>Agua de red (clorada)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="consejos">
+                        <h4><i class="fas fa-lightbulb"></i> Consejos Importantes</h4>
+                        <ul>
+                            <li>Usar solo agua de pozo o filtrada</li>
+                            <li>Esperar 7 días entre aplicaciones</li>
+                            <li>Consultar con técnico antes de mezclar</li>
+                            <li>Leer etiquetas de otros productos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+        
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>FFO SA</span>
+                    </div>
+                    <p>Enmienda Biológica Líquida para mejorar la fertilidad del suelo de forma natural</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#productos">Producto</a></li>
+                        <li><a href="index.html#aplicacion">Aplicación</a></li>
+                        <li><a href="index.html#nosotros">Nosotros</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FFO SA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
